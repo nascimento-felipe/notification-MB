@@ -2,9 +2,17 @@ import { Notifyer } from './Notifyer.js';
 import { Timer } from './Timer.js';
 import { Emmiter } from './Emmiter.js';
 
+const messages = [
+  'Crie algum post para ajudar a comunidade',
+  'Está na hora de ir para o IG',
+  'O post está pronto para ser postado?',
+  'Seus seguidores te aguardam!',
+  'O chefe dos posts do IG requisita sua presença',
+];
+
 const notify = Notifyer.notify({
   title: 'Hora do Post',
-  body: 'Crie algum post pra ajudar a comunidade',
+  body: messages[Math.floor(Math.random() * (messages.length - 0) - 0)],
 });
 
 const App = {
